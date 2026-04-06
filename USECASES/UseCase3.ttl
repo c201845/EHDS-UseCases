@@ -1,0 +1,34 @@
+@prefix dpv: <https://w3id.org/dpv#> .
+@prefix sector-health: <https://w3id.org/dpv/sector/health#> .
+@prefix ex: <https://example.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+ex:DiagnosticTrainingActivity a dpv:Process ;
+
+   # Status: Indicates the technical process is currently active
+    dpv:hasStatus dpv:ActivityOngoing ;
+    dpv:hasPurpose sector-health:TrainTestAndEvaluateHealthRelatedAlgorithms,
+                    sector-health:DiagnosticOptimisation ;
+
+   # Implementation technology
+    dpv:isImplementedUsingTechnology sector-health:ElectronicHealthRecordSystem ;
+    
+    # defining the specific data types
+    dpv:hasData sector-health:MedicalImaging, 
+                 sector-health:PersonalElectronicHealthData ;
+    
+    # defining the Legal Basis for secondary use under EHDS
+    dpv:hasLegalBasis dpv:PublicInterest ;
+    
+    # defining the processing operations
+    dpv:hasProcessing dpv:Analyse, dpv:Train ;
+    
+    # Technical Safeguard: Mandatory SPE for pseudonymised data
+    dpv:hasTechnicalMeasure sector-health:SecureProcessingEnvironment ;
+
+    # Actor: The entity managing the processing within the SPE
+    dpv:hasDataProcessor ex:DiagnosticAICompany .
+
+ex:DiagnosticAICompany a dpv:ForProfitOrganisation, dpv:DataProcessor .
+
+

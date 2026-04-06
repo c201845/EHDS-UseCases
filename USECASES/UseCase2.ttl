@@ -1,0 +1,44 @@
+@prefix dpv: <https://w3id.org/dpv#> .
+@prefix pd: <https://w3id.org/dpv/pd#> .
+@prefix eu-gdpr: <https://w3id.org/dpv/legal/eu/gdpr#> .
+@prefix sector-health: <https://w3id.org/dpv/sector/health#> .
+@prefix eu-ehds: <https://w3id.org/dpv/legal/eu/ehds#> .
+@prefix ex: <https://example.com/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+ 
+# Defining the specific harmful purpose per EHDS Art 54(d)
+ex:HarmfulAndAddictiveProductDevelopment a dpv:Purpose ;
+    skos:broader dpv:ResearchAndDevelopment ;
+    dct:title "Development of Harmful, Addictive, or Public-Order Contravening Products"@en ;
+    dct:description "Research and development activities concerning illicit drugs, alcohol, tobacco/nicotine, weaponry, or services designed to create addiction and risk to human health per EHDS Art 54(d)."@en ;
+    dct:identifier "EHDS-PROHIBITION-PD" .
+ 
+# Representing the prohibition policy 
+ex:ProhibitionPolicy a dpv:Policy ;
+    dct:title "Secondary Use Prohibition Policy"@en ;
+    dpv:hasRule [
+        a dpv:Prohibition ;
+        dpv:hasPurpose ex:HarmfulAndAddictiveProductDevelopment ;
+        dpv:hasStatus dpv:Prohibited ;
+    ] .
+ 
+# Defining the Data Request
+ex:ProhibitedRequest a eu-ehds:HealthDataRequest ;
+    dct:identifier "EHDS-REJ-2026-001" ;
+    dct:title "Commercial Optimisation of Addictive Nicotine Product Development"@en ;
+    
+    # Mapping the Data Request to the prohibited purpose and recipient type
+    dpv:hasPurpose ex:HarmfulAndAddictiveProductDevelopment ;
+    dpv:hasRecipient ex:GlobalNicotineManufacturer ;
+    
+    # Identifying the Data Categories
+    dpv:hasPersonalData eu-ehds:HealthcareProvisionAggregatedData ;
+    
+    # Defining the outcome of the policy evaluation
+    dpv:hasStatus dpv:RequestRejected ;
+    dpv:hasIndication eu-gdpr:PurposeIncompatible .
+ 
+# Align the Recipient with DPV taxonomy 
+ex:GlobalNicotineManufacturer a dpv:ForProfitOrganisation, dpv:Recipient ;
+    skos:prefLabel "Global Nicotine Manufacturer"@en .

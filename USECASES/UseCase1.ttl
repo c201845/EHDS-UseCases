@@ -1,0 +1,34 @@
+@prefix dpv: <https://w3id.org/dpv#> .
+@prefix pd: <https://w3id.org/dpv/pd#> .
+@prefix sector-health: <https://w3id.org/dpv/sector/health#> .
+@prefix eu-ehds: <https://w3id.org/dpv/legal/eu/ehds#> .
+@prefix ex: <https://example.com/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+ 
+# define the Data Request 
+ex:OncologyResearchRequest a eu-ehds:HealthDataRequest ;
+    dct:identifier “EHDS-DATA-REQUEST" ;
+  
+    dpv:hasPurpose ex:OncologyEnvironmentalResearch ;
+    # identifying the Data Categories 
+    dpv:hasPersonalData pd:HealthRecord, eu-ehds:GenomicData ;
+    # identifying the Health Data User
+    dpv:hasRecipient ex:GhentUniversityResearchCenter ;  
+    # represent the Data Request stage
+    dpv:hasStatus dpv:RequestAcknowledged ;
+    # define the legal basis for secondary use as per Art. 53 of the EHDS
+    dpv:hasLegalBasis dpv:PublicInterest . // instead of dpv:PublicInterest maybe eu-gdpr:A9-2-j public interest, scientific research, statistical purpose is better 
+ 
+# extending the DPV Purpose 
+ex:OncologyEnvironmentalResearch a dpv:Purpose ;
+    skos:broader sector-health:HealthcareScientificResearch ;
+    # provide human-readable information for clarity
+    dct:title "Oncology Environmental Factor Study 2026"@en ;
+    dct:description "Scientific research identifying correlations between environmental pollutants and genomic  mutations in lung cancer."@en ;
+    dct:identifier “ONCO-RES" .
+ 
+# align the Recipient with DPV taxonomy
+ex:GhentUniversityResearchCenter a dpv:AcademicScientificOrganisation, dpv:Recipient ;
+    skos:prefLabel "Ghent University Oncology Research Center"@en .
+ 

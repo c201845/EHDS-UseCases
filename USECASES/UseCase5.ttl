@@ -1,0 +1,32 @@
+@prefix dpv: <https://w3id.org/dpv#> .
+@prefix pd: <https://w3id.org/dpv/pd#> .
+@prefix sector-health: <https://w3id.org/dpv/sector/health#> .
+@prefix eu-ehds: <https://w3id.org/dpv/legal/eu/ehds#> .
+@prefix ex: <https://example.com/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+# defining the Data Request and the intention to access data under EHDS secondary use
+ex:PolicyDataRequest a eu-ehds:HealthDataRequest ;
+    dct:title " Pharmaceutical Budget Impact Study"@en ;
+    
+    # Secondary use permitted for evidence-based health policy development       
+    dpv:hasPurpose dpv:PolicyMaking ;
+    
+    # Contextualizes the request within the EHDS secondary use framework (Chapter IV)
+    dpv:hasContext sector-health:SecondaryUse ;
+    
+    # Specifies the sensitive health data source
+    dpv:hasPersonalData eu-ehds:ElectronicPrescription ;
+    
+    # Mandatory technical transformation to ensure privacy-by-design before disclosure    
+    dpv:hasProcessing dpv:Anonymise ;
+    
+    # Link to the resulting output
+    dpv:hasOutcome ex:PrescriptionReport .
+
+# The finalized output provided in an anonymised statistical format per Art. 69(2)(d)
+ex:PrescriptionReport a dpv:Data, dpv:NonPersonalData ;
+     # Verification that the result is no longer personal data under GDPR        
+     dpv:hasStatus dpv:AnonymisedData ;
+     # scope of the aggregated statistical findings provided to the policy maker
+    dct:description "Aggregated pharmaceutical counts by region and age group."@en .
