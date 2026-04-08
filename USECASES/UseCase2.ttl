@@ -25,7 +25,7 @@ ex:ProhibitionPolicy a dpv:Policy ;
  
 # Defining the Data Request
 ex:ProhibitedRequest a eu-ehds:HealthDataRequest ;
-    dct:identifier "EHDS-REJ-2026-001" ;
+    dct:identifier "EHDS-PROH-REC" ;
     dct:title "Commercial Optimisation of Addictive Nicotine Product Development"@en ;
     
     # Mapping the Data Request to the prohibited purpose and recipient type
