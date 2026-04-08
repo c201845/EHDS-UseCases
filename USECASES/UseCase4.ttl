@@ -21,8 +21,13 @@ ex:PharmaSafetyRequest a eu-ehds:HealthDataRequest ;
         skos:prefLabel "GlobalPharmacy Ltd"@en ;
 	    dpv:hasEntityLocation <https://w3id.org/loc/EU>
     ] ;
-    
-    # defining the purpose validated against permitted uses
+
+    dpv:hasDataController [
+		a eu-ehds:HealthDataAccessBody, dpv:DataController ;
+		skos:prefLabel "Health Data Access Authority"@en
+	] ;
+
+    # defining the purpose validated against permitted uses under the EHDS
     dpv:hasPurpose sector-health:PublicHealthMonitoring, 
                     sector-health:PostMarketSurveillance  ;
 
@@ -33,7 +38,7 @@ ex:PharmaSafetyRequest a eu-ehds:HealthDataRequest ;
     # defining the the technical safeguard - Secure Processing Environment
     dpv:hasTechnicalMeasure sector-health:SecureProcessingEnvironment  ;
 
-    # defining the Legal Basis for secondary use under EHDS
+    # defining the Legal Basis for secondary use alignment with the GDPR
     dpv:hasLegalBasis dpv:PublicInterest  ;  #instead of dpv:PublicInterest should I consider dpv-gdpr:A6-1-e-public-interest
 
     # defining the processing operations the use will do
