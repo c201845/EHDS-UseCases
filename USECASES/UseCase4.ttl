@@ -33,7 +33,7 @@ ex:PharmaSafetyRequest a eu-ehds:HealthDataRequest ;
     dpv:hasTechnicalMeasure sector-health:SecureProcessingEnvironment  ;
 
     # defining the Legal Basis for secondary use under EHDS
-    dpv:hasLegalBasis dpv:PublicInterest  ;// instead of dpv:PublicInterest should I consider dpv-gdpr:A6-1-e-public-interest
+    dpv:hasLegalBasis dpv:PublicInterest  ;  #instead of dpv:PublicInterest should I consider dpv-gdpr:A6-1-e-public-interest
 
     # defining the processing operations the use will do
     dpv:hasProcessing dpv:Analyse, dpv:Aggregate  ;
