@@ -18,7 +18,7 @@ ex:DiagnosticTrainingActivity a dpv:Process ;
                  sector-health:PersonalElectronicHealthData ;
     
     # defining the Legal Basis for secondary use under EHDS
-    dpv:hasLegalBasis dpv:PublicInterest ;
+    dpv:hasLegalBasis dpv:PublicInterest ;  #instead of dpv:PublicInterest should I consider dpv-gdpr:A6-1-e-public-interest
     
     # defining the processing operations
     dpv:hasProcessing dpv:Analyse, dpv:Train ;
