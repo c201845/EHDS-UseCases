@@ -2,6 +2,7 @@
 @prefix sector-health: <https://w3id.org/dpv/sector/health#> .
 @prefix eu-ehds: <https://w3id.org/dpv/legal/eu/ehds#> .
 @prefix ex: <https://example.com/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 
 # defining the Data Request
