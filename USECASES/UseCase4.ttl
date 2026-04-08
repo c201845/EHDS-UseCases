@@ -27,7 +27,7 @@ ex:PharmaSafetyRequest a eu-ehds:HealthDataRequest ;
                     sector-health:PostMarketSurveillance  ;
 
     # defining the actual data requested 
-    dpv:hasData sector-health:ElectronicHealthData,
+    dpv:hasPersonalData sector-health:ElectronicHealthData,
                  sector-health:HealthAggregatedData  ;
 
     # defining the the technical safeguard - Secure Processing Environment
