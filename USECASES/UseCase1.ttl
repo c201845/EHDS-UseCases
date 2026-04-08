@@ -8,7 +8,7 @@
  
 # define the Data Request 
 ex:OncologyResearchRequest a eu-ehds:HealthDataRequest ;
-    dct:identifier “EHDS-DATA-REQUEST" ;
+    dct:identifier "EHDS-DATA-REQUEST" ;
   
     dpv:hasPurpose ex:OncologyEnvironmentalResearch ;
     # identifying the Data Categories 
