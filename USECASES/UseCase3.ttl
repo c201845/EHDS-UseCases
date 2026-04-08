@@ -14,7 +14,7 @@ ex:DiagnosticTrainingActivity a dpv:Process ;
     dpv:isImplementedUsingTechnology sector-health:ElectronicHealthRecordSystem ;
     
     # defining the specific data types
-    dpv:hasData sector-health:MedicalImaging, 
+    dpv:hasPersonalData sector-health:MedicalImaging, 
                  sector-health:PersonalElectronicHealthData ;
     
     # defining the Legal Basis for secondary use under EHDS
