@@ -7,7 +7,7 @@
 
 # defining the Data Request and the intention to access data under EHDS secondary use
 ex:PolicyDataRequest a eu-ehds:HealthDataRequest ;
-    dct:title " Pharmaceutical Budget Impact Study"@en ;
+    dct:title "Pharmaceutical Budget Impact Study"@en ;
     
     # Secondary use permitted for evidence-based health policy development       
     dpv:hasPurpose dpv:PolicyMaking ;
