@@ -18,7 +18,7 @@ ex:OncologyResearchRequest a eu-ehds:HealthDataRequest ;
     # represent the Data Request stage
     dpv:hasStatus dpv:RequestAcknowledged ;
     # define the legal basis for secondary use as per Art. 53 of the EHDS
-    dpv:hasLegalBasis dpv:PublicInterest . // instead of dpv:PublicInterest maybe eu-gdpr:A9-2-j public interest, scientific research, statistical purpose is better 
+    dpv:hasLegalBasis dpv:PublicInterest .  #instead of dpv:PublicInterest maybe eu-gdpr:A9-2-j public interest, scientific research, statistical purpose is better 
  
 # extending the DPV Purpose 
 ex:OncologyEnvironmentalResearch a dpv:Purpose ;
