@@ -40,7 +40,7 @@ ex:PharmaSafetyRequest a eu-ehds:HealthDataRequest ;
 
     # defining the Legal Basis property to specify the legal justification under which the health data can be accessed and processed for secondary use
     dpv:hasLegalBasis dpv:PublicInterest  ;  #instead of dpv:PublicInterest should I consider replacing it with a specific GDPR legal basis such as eu-gdpr:A6-1-e-public-interest 
-                                             #to make the legal basis precise for the scenario since now the current placeholder demonstrates the concept but without committing to a jurisdiciton-specific article.
+                                             #to make the legal basis precise for the scenario since now the current placeholder demonstrates the concept but without committing to a jurisdiction-specific article.
 
     # defining the processing operations the use will do
     dpv:hasProcessing dpv:Analyse, dpv:Aggregate  ;
