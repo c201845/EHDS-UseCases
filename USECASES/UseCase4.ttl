@@ -9,7 +9,7 @@ ex:PharmaSafetyRequest a eu-ehds:HealthDataRequest ;
   
   # Metadata for the request
     dpv:hasStatus dpv:RequestInitiated  ;
-    dct:identifier “EHDS-REQ”  ;
+    dct:identifier "EHDS-REQ"  ;
     
    # identifying the request as a secondary use activity
     dpv:hasContext sector-health:SecondaryUse  ;
@@ -17,7 +17,7 @@ ex:PharmaSafetyRequest a eu-ehds:HealthDataRequest ;
     # mapping actor to the EHDS role
     dpv:hasRecipient [
         a eu-ehds:HealthDataUser  ;
-        dpv:hasName "GlobalPharmacy Ltd”  ;
+        dpv:hasName "GlobalPharmacy Ltd"  ;
 	dpv:hasEntityLocation <https://w3id.org/loc/EU>
     ] ;
     
@@ -42,6 +42,6 @@ ex:PharmaSafetyRequest a eu-ehds:HealthDataRequest ;
     dpv:hasRule [
         a dpv:Prohibition  ;
         dpv:hasProcessing dpv:Reidentify  ;
-        dct:description “Re-identification of natural persons is strictly prohibited under EHDS secondary use rules.” @en
+        dct:description "Re-identification of natural persons is strictly prohibited under EHDS secondary use rules." @en
     ] .
 .
