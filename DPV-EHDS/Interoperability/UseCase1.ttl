@@ -4,6 +4,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <https://w3id.org/examples#> .
 
+# concept representing the active exchange infrastructure
 :HealthDataConnector a eu-ehds:TechnicalInteroperabilityProcesses ;
     dct:title "Cross-border Mapping Engine" ;
     dct:description "A technical infrastructure used to transform medical records into the European standard format (EEHRxF)." ;
@@ -11,6 +12,7 @@
     dpv:hasTechnicalMeasure ex:SNOMED-CTClinicalMappingLogic ;
     dpv:hasStatus dpv:ActivityOngoing .
 
+# a concrete instance of the technical measure providing semantic interoperability
 ex:SNOMED-CTClinicalMappingLogic a dpv:TechnicalMeasure ;
     dct:title "SNOMED-CT Clinical Mapping Logic" ;
     ddct:description "A comprehensive, machine-readable clinical terminology engine that provides a single shared language for health data. 
