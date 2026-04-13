@@ -4,10 +4,13 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <https://w3id.org/examples#> .
 
+# the concept representing the mandatory regulatory check
 ex:ComplianceAudit a ext:TechnicalInteroperabilityAssessment ;
     dct:title "EHDS Conformity Assessment" ;
     dct:description "Formal audit to verify the HealthDataConnector against EHDS Article 48 and Annex II requirements." ;
+    # the date the assessment was officially conducted
     dpv:hasDate "2026-04-13"^^xsd:date ;
+    # this connects the Organisational Measure back to the Technical Process
     dpv:isAssessmentOf ex:HealthDataConnector ;
     dpv:hasStatus dpv:Compliant ;
     dpv:hasExpiryDate "2027-04-13"^^xsd:date ;
