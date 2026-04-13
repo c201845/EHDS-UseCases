@@ -1,0 +1,13 @@
+@prefix dpv: <https://w3id.org/dpv#> .
+@prefix eu-ehds: <https://w3id.org/dpv/ext/eu-ehds#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://w3id.org/examples#> .
+
+ex:ComplianceAudit a ext:TechnicalInteroperabilityAssessment ;
+    dct:title "EHDS Conformity Assessment" ;
+    dct:description "Formal audit to verify the HealthDataConnector against EHDS Article 48 and Annex II requirements." ;
+    dpv:hasDate "2026-04-13"^^xsd:date ;
+    dpv:isAssessmentOf ex:HealthDataConnector ;
+    dpv:hasStatus dpv:CompliancePassed ;
+    dpv:hasExpiryDate "2027-04-13"^^xsd:date ;

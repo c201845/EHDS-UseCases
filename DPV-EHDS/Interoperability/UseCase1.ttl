@@ -1,0 +1,16 @@
+@prefix dpv: <https://w3id.org/dpv#> .
+@prefix eu-ehds: <https://w3id.org/dpv/ext/eu-ehds#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://w3id.org/examples#> .
+
+:HealthDataConnector a eu-ehds:TechnicalInteroperabilityProcesses ;
+    dct:title "Cross-border Mapping Engine" ;
+    dct:description "A technical infrastructure used to transform medical records into the European standard format (EEHRxF)." ;
+
+    dpv:hasTechnicalMeasure ex:SNOMED-CTClinicalMappingLogic ;
+    dpv:hasStatus dpv:ActivityOngoing .
+
+ex:SNOMED-CTClinicalMappingLogic a dpv:TechnicalMeasure ;
+    dct:title "SNOMED-CT Clinical Mapping Logic" ;
+    ddct:description "A comprehensive, machine-readable clinical terminology engine that provides a single shared language for health data. It uses scientifically validated clinical content to map national terms to international concepts, ensuring that exchanging information is safer, more accurate, and supports automated clinical decision-making." .
