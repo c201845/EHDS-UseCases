@@ -1,0 +1,12 @@
+## Use Case for eu-ehds:HealthDataAcessApplication
+Description: This example illustrates the formal procedural entry point for secondary data reuse within the EHDS by 
+focusing on eu-ehds:HealthDataAccessApplication. It focuses on a public health institute (the dpv:Applicant) which proposes a study to 
+correlate urban atmospheric conditions with clinical respiratory outcomes. The eu-ehds:HealthDataAcessApplication represents the phase 
+mandated by EHDS Article 67, where the applicant must justify the necessity, proportionality, and technical safety of their request before 
+any data is released. The application is modeled as a specialised dpv:OrganisationalMeasure that serves as a structured compliance container. 
+To satisfy Article 67(2)(f), the metadata explicitly describes the eu-ehds:EnvironmentalHealthDeterminant datasets (such as air quality sensor 
+data) that the applicant intends to bring into the secure environment. Furthermore, the application fulfills the requirement of Article 67(2)(e) 
+by providing a dpv:Justification for pseudonymisation, arguing that longitudinal patient tracking against daily environmental markers is 
+impossible using anonymised data. By capturing these elements, the model distinguishes the application from an authorised eu-ehds:DataPermit, 
+documenting the applicant's proposed dpv:Safeguard, their requested computing resources under Article 67(2)(i), and their activities,
+providing a transparent and auditable record for the Health Data Access Body (HDAB) to evaluate.
