@@ -9,5 +9,5 @@ ex:ComplianceAudit a ext:TechnicalInteroperabilityAssessment ;
     dct:description "Formal audit to verify the HealthDataConnector against EHDS Article 48 and Annex II requirements." ;
     dpv:hasDate "2026-04-13"^^xsd:date ;
     dpv:isAssessmentOf ex:HealthDataConnector ;
-    dpv:hasStatus dpv:CompliancePassed ;
+    dpv:hasStatus dpv:Compliant ;
     dpv:hasExpiryDate "2027-04-13"^^xsd:date ;
