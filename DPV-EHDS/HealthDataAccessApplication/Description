@@ -7,6 +7,7 @@ any data is released. The application is modeled as a specialised dpv:Organisati
 To satisfy Article 67(2)(f), the metadata explicitly describes the eu-ehds:EnvironmentalHealthDeterminant datasets (such as air quality sensor 
 data) that the applicant intends to bring into the secure environment. Furthermore, the application fulfills the requirement of Article 67(2)(e) 
 by providing a dpv:Justification for pseudonymisation, arguing that longitudinal patient tracking against daily environmental markers is 
-impossible using anonymised data. By capturing these elements, the model distinguishes the application from an authorised eu-ehds:DataPermit, 
-documenting the applicant's proposed dpv:Safeguard, their requested computing resources under Article 67(2)(i), and their activities,
-providing a transparent and auditable record for the Health Data Access Body (HDAB) to evaluate.
+impossible using anonymised data. As per Article 67(2)(c), the eu-ehds:HealthDataAcessApplication documents the expected benefit to public health, 
+specifically how the findings will inform urban pollution mitigation strategies. Having captured these elements, the model distinguishes the 
+application from an authorised eu-ehds:DataPermit, documenting the applicant's proposed dpv:Safeguard, their requested computing resources 
+under Article 67(2)(i), and their activities, providing a transparent and auditable record for the Health Data Access Body (HDAB) to evaluate.
