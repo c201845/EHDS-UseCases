@@ -1,0 +1,37 @@
+## Use Case for eu-ehds:ServiceSupplyStatus
+Description: This example illustrates the formal representation of the overarching regulatory standing of a cross-border Diagnostic System 
+within the Union’s central registry. In this example, we model the continuous monitoring of a technology's presence in the market by a 
+National Market Surveillance Authority. The core entity is the concept eu-ehds:ServiceSupplyStatus, which serves as the anchor for the technology's
+presence in the EU supply chain. Rather than marking a single event, this concept functions as a state-machine anchor that tracks whether an EHR system
+is legally authorized to be supplied, put into service, or if it must be recalled. The process is governed by a tech:hasProvisionStatus property 
+that links the system’s supply-chain readiness to the acquisition of infrastructure level data like tech:Software for integrity verification. 
+By using this specific status term, the model reflects the technical precision required for high-level governance, ensuring the technology is 
+legally authorised for sector-health:DiagnosticSupport across jurisdictions.
+
+## Use Case for eu-ehds:PutIntoService
+Description: This example demonstrates the formal representation of the operational debut of an AI-driven Diagnostic Imaging Analysis 
+system into a regulated clinical environment under the EHDS framework. This example models where a technology transitions from a development 
+or testing state to being actively available for clinical decision-making. The core entity is the concept eu-ehds:PutIntoService, 
+which serves as the legal and technical status anchor for the system’s entry into the healthcare market. The process is initiated as an 
+implementation by a dpv:DataController, targeting the diagnostic processing of imaging data as a specialized 
+task within sector-health:DiagnosisManagement. By using this specific status term, the model reflects the technical precision required to 
+prove that the system has met all necessary interoperability and safety benchmarks required by EHDS Annex II before its first use.
+
+## Use Case for eu-ehds:RecalledFromService
+Description: This example illustrates the formal representation of a mandatory safety intervention involving a Remote Patient 
+Vitals Monitoring component that has been flagged for a critical defect. Following the market surveillance requirements of the 
+EHDS, the use case models the emergency switch triggered when a technology is no longer deemed safe for its intended purpose. 
+The core entity is the concept eu-ehds:RecalledFromService, which serves as the authoritative status anchor that programmatically halts 
+the system's operational life across all connected healthcare providers. The process involves a coordinated dpv:OrganisationalMeasure to 
+execute hardware deactivation and return protocols, specifically targeting the immediate cessation of sector-health:PatientMonitoring. 
+By using this specific status term (a sub-concept of the EHDS supply chain hierarchy), the model reflects the technical precision needed 
+to isolate and neutralise faulty data streams in real-time to protect patient safety.
+
+## Use Case for eu-ehds:WithdrawnFromService
+Description: This example demonstrates the formal representation of the retirement of a Legacy Patient Portal that fails to 
+satisfy the modern cybersecurity or interoperability standards mandated by the EHDS. Following the principle of Data Protection by Design,
+the example models the removal of a technology from the supply chain to prevent the processing of high-risk datasets. The core entity 
+is the concept eu-ehds:WithdrawnFromService, which serves as the terminal status anchor for the system’s lifecycle to ensure no further acquisition 
+occurs. The process is characterized by a replacement logic where the legacy system is superseded by a secure portal, specifically to protect 
+sensitive categories such as pd:MedicalHealth, pd:Prescription, and pd:MentalHealth. By using this specific status term, the model reflects the 
+technical precision required to manage infrastructure modernisation while maintaining the continuity of sector-health:PatientInformationManagement.
