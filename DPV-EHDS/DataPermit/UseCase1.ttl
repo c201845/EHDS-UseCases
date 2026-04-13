@@ -1,0 +1,33 @@
+@prefix dpv: <https://w3id.org/dpv#> .
+@prefix eu-ehds: <https://w3id.org/dpv/ext/eu-ehds#> .
+@prefix sector-health: <https://w3id.org/dpv/ext/sector-health#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://w3id.org/examples#> .
+
+
+# the Data Permit for a specific regulatory safety study
+ex:DrugSafetyPermit a eu-ehds:DataPermit ;
+    dct:title "Post-Market Pharmacovigilance Permit" ;
+    dct:description "Permit issued for the secondary use of clinical data to investigate cardiovascular safety signals in post-market medication." ;
+    
+    # The regulatory body authorised to access the data
+    dpv:hasRecipient ex:MedicinesAgency ;
+    
+    dpv:hasPurpose sector-health:PublicHealthMonitoring ;
+    
+    # GDPR Art. 6(1)(e) legal basis carried out by an Official Authority
+    dpv:hasLegalBasis dpv:OfficialAuthorityOfController ;
+    
+    # link the data permit to the mandatory Secure Processing Environment (SPE) requirement
+    dpv:hasOrganisationalMeasure ex:NationalHealthDataSPE .
+
+
+# The legal entity
+ex:MedicinesAgency a dpv:LegalEntity ;
+    dct:title "Agency for Medicine and Health Products" .
+
+# The Secure Processing Environment instance
+ex:NationalHealthDataSPE a dpv:SecureProcessingEnvironment ;
+    dct:title "Secure Processing Environment (Art. 50 EHDS)" ;
+    dct:description "The environment where the data analysis must take place." .
