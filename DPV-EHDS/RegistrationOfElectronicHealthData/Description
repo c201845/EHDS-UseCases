@@ -1,0 +1,12 @@
+## Use Case for eu-ehds:RegistrationElectronicHealthData
+Description: This example demonstrates the formal representation of the initial acquisition and digital 
+onboarding of patient health data into a regulated Electronic Health Record (EHR) system under the European 
+Health Data Space (EHDS) framework. Following the strict definitions of Article 2.2(g), the scenario models 
+the entry point of data where a Healthcare Provider transforms real-world health observations into a digital 
+format. The core entity is the concept eu-ehds:RegistrationOfElectronicHealthData, which serves as the active 
+processing anchor for the transaction. The process is initiated as a dpv:Process, targeting the multimodal acquisition
+of sensitive datasets which could include pd:HealthRecord for clinical history and pd:PhysicalHealth for biometric vitals. 
+By using the specific eu-ehds term (a sub-concept of dpv:Obtain as verified in the DPV 2.3 hierarchy), the model reflects 
+the technical precision required to cover manual entry, device collection, and the digital conversion simultaneously. 
+To satisfy the legal requirement for Purpose Specification, the registration is linked to sector-health:HealthcareManagement, 
+a specialised purpose from the sector-health extension.
