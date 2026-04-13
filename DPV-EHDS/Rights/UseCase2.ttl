@@ -1,0 +1,40 @@
+@prefix dpv: <https://w3id.org/dpv#> .
+@prefix eu-ehds: <https://w3id.org/dpv/ext/eu-ehds#> .
+@prefix risk: <https://w3id.org/dpv/risk#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://w3id.org/examples#> .
+
+# the Right to Lodgde the complaint as per Art. 21
+ex:PatientComplaintProcess a dpv:RightExerciseRecord ;
+    # The EHDS Right being exercised
+    dpv:hasRight eu-ehds:A21 ;
+    
+    # The status of the complaint process
+    dpv:hasStatus dpv:RequestInitiated ;
+    
+    # The subject lodging the complaint
+    dpv:hasDataSubject ex:IndividualPatient ;
+    
+    # The Competent Digital Health Authority receiving the complaint
+    dpv:hasRecipient sector-health:DigitalHealthAuthority ;
+    
+    # Expressing the impact that led to the complaint 
+    dpv:hasImpact [
+        a risk:RightsViolated ;
+        # indicate that the Right to Access eu-ehds:A21 is obstructed
+        dpv:hasImpactOnRight eu-ehds:A3 ; 
+        dct:description "The patient was unable to download their medical discharge summary due to technical barriers in the portal."@en ;
+    ] ;
+
+    # Timestamp of the complaint
+    dct:created "2026-04-13"^^xsd:date ;
+    dct:description "Formal complaint lodged regarding the obstruction of electronic health data access services."@en .
+
+
+# The Digital Health Authority (Competent Authority under Art. 21
+sector-health:DigitalHealthAuthority a dpv:LegalEntity ;
+    dct:title "National Digital Health Authority" ;
+    dct:description "The regulatory body responsible for overseeing EHDS implementation and handling citizen complaints." .
+
+Description: This example illustrates the exercise of the eu-ehds:A21 right, representing the formal procedural mechanism for natural or legal persons to lodge a complaint when their digital health rights are compromised. The use case begins shows where a dpv:DataSubject encounters a persistent obstruction while attempting to exercise their right to access electronic health data (eu-ehds:A3) through a national portal. Rather than being a simple administrative log, the model captures the transition from a perceived violation to a regulatory process by linking the dpv:RightExerciseRecord to a specific dpv:hasImpact. By utilising the logic of rights impact assessment, the application of eu-ehds:A21 provides a machine-readable justification for the complaint, specifically identifying the incident as a risk:RightsViolated instance where access was obstructed. The description identifies the National Digital Health Authority as the dpv:Recipient, establishing it as the competent body responsible for oversight under the EHDS framework. This structured approach ensures that the complaint is not merely a text entry but a functional piece of metadata that connects the failure of a technical service to a formal legal process, providing the transparency and auditability required by EHDS Article 21.

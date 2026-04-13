@@ -1,0 +1,30 @@
+@prefix dpv: <https://w3id.org/dpv#> .
+@prefix eu-ehds: <https://w3id.org/dpv/ext/eu-ehds#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ex: <https://w3id.org/examples#> .
+
+# Right of natural persons to opt out from primary use as Art. 10
+ex:PatientOptOutPrimaryUse a dpv:RightExerciseRecord ;
+    # the EHDS Right being exercised
+    dpv:hasRight eu-ehds:A10 ;
+    # the status of the request
+    dpv:hasStatus dpv:RequestFulfilled ;
+    # the individual exercising that right
+    dpv:hasDataSubject ex:IndividualPatient ;
+    # the authority responsible for implementing the opt-out preference
+    dpv:hasRecipient ex:NationalHealthPortal ;
+    
+    # Contextual metadata: specifying the scope of the opt-out
+    # Art. 10 targets the Electronic Health Data Access Services
+    dpv:isApplicableTo ex:EHRSharingService ;
+
+# the Service restricted
+ex:EHRSharingService a dpv:Service ;
+    dct:title "National EHR Access and Exchange Service" .
+
+# the Individual exercising the right
+ex:IndividualPatient a dpv:LegalEntity ;
+
+
+Description:
+This example demonstrates the exercise of the eu-ehds:A10 right, representing a fundamental control mechanism for natural persons within the primary use of health data. It records a use case where a dpv:DataSubject opts out from having their electronic health records made available through national or cross-border access services. By creating a dpv:RightExerciseRecord, the framework provides a machine-readable instruction to the dpv:DataController (the National Health Portal). This record ensures that health professionals outside of those currently treating the patient cannot retrieve the records through the EHDS infrastructure, thereby fulfilling the patient's right to digital self-determination under EHDS Article 10.

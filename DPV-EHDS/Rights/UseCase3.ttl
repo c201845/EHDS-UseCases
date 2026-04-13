@@ -1,0 +1,36 @@
+@prefix dpv: <https://w3id.org/dpv#> .
+@prefix eu-ehds: <https://w3id.org/dpv/ext/eu-ehds#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://w3id.org/examples#> .
+
+# the Processing Operation in respect to Art. 9
+ex:EHRProfessionalAccessService a dpv:PersonalDataHandling ;
+    dct:title "Primary Use EHR Retrieval Service" ;
+    
+    dpv:hasPurpose dpv:Healthcare ;
+    
+    # associate the Right as a structural requirement of the process
+    # this can indicates the process is legally bound to provide A9 information
+    dpv:hasRight eu-ehds:A9 ;
+    
+    # use the Privacy-by-Design as the organisational approach
+    dpv:hasOrganisationalMeasure dpv:PrivacyByDesign ;
+    
+    # define the automated mechanism that fulfils Art. 9
+    dpv:hasTechnicalMeasure ex:AutomaticAccessNotifier ;
+    
+    # indicate the status of the activity as lawful and active
+    dpv:hasStatus dpv:ActivityOngoing ;
+    
+    # Correct DPV compliance property
+    dpv:hasComplianceStatus dpv:Compliant ; 
+    
+    dct:description "EHR access service for doctors which automatically triggers a patient notification for every data retrieval event as per EHDS Art. 9."@en .
+
+# The technical measure that performs the "Automatic Notification"
+ex:AutomaticAccessNotifier a dpv:TechnicalMeasure ;
+    dct:title "EHDS Automated Notification Trigger" ;
+    dct:description "The backend service that logs professional access and pushes a summary to the Data Subject's verified endpoint." .
+
+Description: This example illustrates the implementation of the eu-ehds:A9 right as a requirement of a health data exchange. It defines the dpv:PersonalDataHandling operations of the Primary Use EHR Retrieval Service as being inherently bound to transparency obligations. The dpv:PrivacyByDesign approach is defined which helps the model to demonstrate how the system satisfies EHDS Article 9 through an integrated dpv:TechnicalMeasure ex:AutomaticAccessNotifier. This backend service ensures that every instance of professional access triggers a real-time notification to the data subject. The inclusion of dpv:hasComplianceStatus dpv:Compliant asserts that the service is built to meet regulatory standards by default, transforming a legal right into an automated feature that ensures continuous accountability in healthcare data processing.
