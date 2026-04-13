@@ -1,0 +1,13 @@
+## Use Case for eu-ehds:A10
+Description: This example demonstrates the exercise of the eu-ehds:A10 right, representing a fundamental control mechanism for natural persons within the 
+primary use of health data. It records a use case where a dpv:DataSubject opts out from having their electronic health records made available 
+through national or cross-border access services. By creating a dpv:RightExerciseRecord, the framework provides a machine-readable instruction 
+to the dpv:DataController (the National Health Portal). This record ensures that health professionals outside of those currently treating the 
+patient cannot retrieve the records through the EHDS infrastructure, thereby fulfilling the patient's right to digital self-determination under 
+EHDS Article 10.
+
+## Use Case for eu-ehds:A9
+Description: 
+
+## Use Case for eu-ehds:
+Description: 
