@@ -1,0 +1,26 @@
+@prefix dpv: <https://w3id.org/dpv#> .
+@prefix pd: <https://w3id.org/dpv/pd#> .
+@prefix tech: <https://w3id.org/dpv/tech#> .
+@prefix eu-ehds: <https://w3id.org/dpv/ext/eu-ehds#> .
+@prefix ex: <https://w3id.org/examples#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix sector-health: <https://w3id.org/dpv/ext/sector-health#> .
+
+ex:LegacyPatientPortal a dpv:Technology ;
+    dct:title "Legacy Patient Access Portal" ;
+    dct:description "Retired due to non-compliance with EHDS Article 25 cybersecurity or interoperability standards required by the EHDS for processing sensitive categories of personal data." ;
+    
+    dpv:hasStatus eu-ehds:WithdrawnFromService ;
+    
+    dpv:hasPurpose sector-health:PatientInformationManagement ;
+    
+    dpv:hasPersonalData pd:MedicalHealth, pd:Prescription, pd:MentalHealth .
+
+ex:SecurePatientPortal a dpv:Technology ;
+    dct:title "Secure Patient Portal" ;
+    dpv:hasStatus eu-ehds:PutIntoService ;
+    dct:replaces ex:LegacyPatientPortal .
+
+ex:ComplianceAudit a dpv:OrganisationalMeasure ;
+    dct:title "Infrastructure Retirement and Data Migration Audit" ;
+    dpv:hasStatus dpv:ActivityCompleted .
