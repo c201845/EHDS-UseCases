@@ -7,7 +7,12 @@ patient cannot retrieve the records through the EHDS infrastructure, thereby ful
 EHDS Article 10.
 
 ## Use Case for eu-ehds:A9
-Description: 
+Description: This example illustrates the implementation of the eu-ehds:A9 right as a requirement of a health data exchange. 
+It defines the dpv:PersonalDataHandling operations of the Primary Use EHR Retrieval Service as being inherently bound to transparency obligations. 
+The dpv:PrivacyByDesign approach is defined which helps the model to demonstrate how the system satisfies EHDS Article 9 through an integrated 
+dpv:TechnicalMeasure ex:AutomaticAccessNotifier. This backend service ensures that every instance of professional access triggers a real-time 
+notification to the data subject. The inclusion of dpv:hasComplianceStatus dpv:Compliant asserts that the service is built to meet regulatory
+standards by default, transforming a legal right into an automated feature that ensures continuous accountability in healthcare data processing.
 
 ## Use Case for eu-ehds:21
 Description: This example illustrates the exercise of the eu-ehds:A21 right, representing the formal procedural mechanism for natural or legal 
