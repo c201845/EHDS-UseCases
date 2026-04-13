@@ -1,0 +1,11 @@
+## Use Case for eu-ehds:DataPermit
+Description: This example illustrates the formal legal authorisation required for post-market Drug Safety Monitoring, which is a high-priority 
+secondary use category under the EHDS. It centers on a use case where a National Medicines Agency must investigate an unexpected side effect linked to 
+a specific cardiovascular medication by analysing health data across multiple regions. Because this involves processing sensitive clinical records 
+for a regulatory purpose rather than individual patient care, it requires a Data Permit issued by a Health Data Access Body (HDAB) under EHDS 
+Article 68. The data permit acts as the formal Organisational Measure that provides the Official Authority to access the data. It identifies the 
+Medicines Agency as the authorised recipient and strictly limits the processing to Public Health Monitoring activities within the health sector. 
+Modeling this as a eu-ehds:DataPermit, the framework ensures the data remains within a Secure Processing Environment (SPE) and is used only for 
+the time-bound duration of the safety investigation. The metadata includes the authorisation of the Medicines Agency, the specific legal basis 
+under GDPR Art. 6(1)(e), and the requirement for a protected environment, providing a machine-readable guarantee that the agency’s access is 
+strictly limited to the necessary window for ensuring public safety.
