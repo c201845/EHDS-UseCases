@@ -14,7 +14,7 @@ ex:RegionalDiagnosticEHRSystem a dpv:Technology ;
     dpv:hasPurpose sector-health:DiagnosticSupport ;
 
     # Technical data categories monitored by the MSA to verify supply integrity
-    dpv:hasData tech:Software, tech:Logs .
+    dpv:hasData tech:Software .
 
 # the Market Surveillance Authority manages the status
 ex:NationalHealthMSA a dpv:Authority ;
