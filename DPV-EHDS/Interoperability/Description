@@ -2,7 +2,7 @@
 Description: This example demonstrates a unified lifecycle for interoperability governance within the EHDS. It begins with the implementation of 
 a Cross-border Mapping Engine, categorised as a eu-ehds:TechnicalInteroperabilityProcesses, which serves as the functional infrastructure required 
 to transform national medical records into the European Electronic Health Record Exchange Format. To ensure this data remains medically 
-accurate and machine-readable across borders, the engine utilizes a specific dpv:TechnicalMeasure known as the SNOMED CT Clinical Terminology 
+accurate and machine-readable across borders, the engine utilizes a specific dpv:TechnicalMeasure known as the SNOMED-CT Clinical Terminology 
 Engine. This terminology engine provides a single shared language that maps complex clinical concepts to scientifically validated international 
 standards, satisfying the semantic interoperability requirements of EHDS Article 2(f). However, in a regulated health environment, having the 
 technical capability is only the first step, as the system must also possess the legal authority to operate. This authority is captured through
