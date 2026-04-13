@@ -16,18 +16,21 @@ ex:EnvironmentalHealthApplication a eu-ehds:HealthDataAccessApplication ;
     dpv:hasEntity ex:PublicHealthInstitute ;
     dpv:hasStatus dpv:ActivityProposed ;
     
-    # Purpose and Sector-Specific Category
+    # Purpose and Sector-Specific Category (Art. 67(2)(b)(d))
     dpv:hasPurpose sector-health:PublicHealthMonitoring ;
+    # expected benefits to society (Art. 67(2)(c))
+    dpv:hasOutcome "Improve evidence-based urban health policies and reduce pediatric asthma hospitalisation rates." ;
     
     # Justification for Pseudonymisation (Art. 67(2)(e))
     dpv:hasJustification "Pseudonymisation is required to link hospital admission timestamps with specific daily Environmental Health Determinant measurements." ;    
+   
     # Bringing in external datasets (Art. 67(2)(f))
     # and referencing the Environmental Health Determinants to be uploaded
     dpv:hasTechnicalMeasure ex:AirQualityDeterminantData ;
 
-    # Safeguards (Art. 67(2)(g))
+    # Safeguards (Art. 67(2)(g)(i))
     dpv:hasTechnicalMeasure ex:GeospatialAnonymisationSafeguard ;
-    dpv:hasTechnicalMeasure ex:RequiredAnalyticsEnvironment ;
+    dpv:hasTechnicalMeasure ex:RequestedAnalyticsEnvironment ;
 
     # Legal Basis (Art. 67(4))
     dpv:hasLegalBasis dpv:OfficialAuthorityOfController ;
