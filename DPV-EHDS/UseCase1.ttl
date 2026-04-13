@@ -15,9 +15,9 @@ ex:PatientClinicalOnboarding a dpv:Process ;
     dpv:hasDataSource dpv:PublicDataSource ;
 
     dpv:hasRecipient ex:HospitalEHRSystem ;
+    dpv:hasPurpose sector-health:HealthcareManagement ;
     
     dpv:hasCompliance dpv:DataQualityManagement .
-    dpv:hasPurpose sector-health:HealthcareManagement ;
 
 eu-ehds:RegistrationOfElectronicHealthData a rdfs:Class, skos:Concept, dpv:Processing ;
     skos:prefLabel "Registration of Electronic Health Data"@en ;
