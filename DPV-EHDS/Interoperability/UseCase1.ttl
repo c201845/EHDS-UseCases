@@ -13,4 +13,6 @@
 
 ex:SNOMED-CTClinicalMappingLogic a dpv:TechnicalMeasure ;
     dct:title "SNOMED-CT Clinical Mapping Logic" ;
-    ddct:description "A comprehensive, machine-readable clinical terminology engine that provides a single shared language for health data. It uses scientifically validated clinical content to map national terms to international concepts, ensuring that exchanging information is safer, more accurate, and supports automated clinical decision-making." .
+    ddct:description "A comprehensive, machine-readable clinical terminology engine that provides a single shared language for health data. 
+    It uses scientifically validated clinical content to map national terms to international concepts, ensuring that exchanging information
+    is safer, more accurate, and supports automated clinical decision-making." .
