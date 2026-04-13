@@ -1,0 +1,15 @@
+## Use Case for eu-ehds:TechnicalInteroperabilityAssessment and eu-ehds:TechnicalInteroperabilityProcesses
+Description: This example demonstrates a unified lifecycle for interoperability governance within the EHDS. It begins with the implementation of 
+a Cross-border Mapping Engine, categorised as a eu-ehds:TechnicalInteroperabilityProcesses, which serves as the functional infrastructure required 
+to transform national medical records into the European Electronic Health Record Exchange Format. To ensure this data remains medically 
+accurate and machine-readable across borders, the engine utilizes a specific dpv:TechnicalMeasure known as the SNOMED CT Clinical Terminology 
+Engine. This terminology engine provides a single shared language that maps complex clinical concepts to scientifically validated international 
+standards, satisfying the semantic interoperability requirements of EHDS Article 2(f). However, in a regulated health environment, having the 
+technical capability is only the first step, as the system must also possess the legal authority to operate. This authority is captured through
+the second concept, the EHDS Conformity Assessment, which is categorised as a eu-ehds:TechnicalInteroperabilityAssessment. This organisational 
+measure represents the formal audit conducted by a Market Surveillance Authority (MSA) to grant the mandatory eu EHR Label required 
+under EHDS Article 48. By utilizing the relationship dpv:isAssessmentOf, the example creates a machine-readable connection that links the legal 
+audit to the technical mapping engine. This connection allows for automated compliance tracking where the validity of the technical process is 
+dependent on the status of its assessment. If the audit status is marked as dpv:CompliancePassed and remains within its dpv:hasExpiryDate, the system 
+is considered authorised for cross-border exchange. Otherwise, the link effectively breaks, signaling that the technical process is no longer legally 
+cleared for use. 
