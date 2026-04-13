@@ -1,0 +1,17 @@
+ex:Regional-EHRSystem-Outage a dpv:Risk ;
+    dct:title "Regional Hospital Health Infrastructure downtime" ;
+  
+    dpv:hasIncident eu-ehds:SeriousHealthInfrastructureDisruption ;
+    # Risk Source is a technical/security failure
+    dpv:hasRiskSource ex:SystemicServerFailure ;
+    dpv:hasConsequence risk:MaterialDamage ;
+    # Impact is on the Organisation/Infrastructure level
+    dpv:hasImpact ex:InfrastructureImpact ;
+    dpv:hasImpactOn dpv:Hospital ;
+    
+    dpv:hasSeverity risk:ExtremelyHighSeverity ;
+    
+    dpv:hasMitigationMeasure ex:SecondaryDataCenterFailover .
+
+ex:SystemicServerFailure a risk:Vulnerability ;
+    dct:description "Total loss of connectivity to the central health data exchange hub." .

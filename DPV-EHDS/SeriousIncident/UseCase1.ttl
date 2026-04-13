@@ -1,0 +1,15 @@
+ex:EHR-Sync-Failure a dpv:Risk ;
+    dct:title "EHR Database Synchronisation Failure" ;
+  
+    dpv:hasIncident eu-ehds:SeriousIncident ;
+    
+    dpv:hasRiskSource ex:EHRSystem-Malfunction ;
+   
+    dpv:hasLikelihood dpv:ModerateLikelihood;
+    dpv:hasSeverity risk:HighSeverity ;
+    
+    dpv:hasMitigationMeasure ex:EmergencyDataBackup .
+
+ex:EHRSystem-Malfunction a risk:Vulnerability ;
+    dct:title "EHR System Performance Deterioration" ;
+    skos:note "Represents a malfunction or deterioration in characteristics as defined in the EHDS Art 2.2(r)." .

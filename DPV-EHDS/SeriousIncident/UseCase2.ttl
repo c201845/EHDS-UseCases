@@ -1,0 +1,12 @@
+ex:EHRSystem-Privacy-Breach a dpv:Risk ;
+    dct:title "Unauthorised Disclosure of Sensitive Health Data" ;
+   
+    dpv:hasIncident eu-ehds:SeriousRightIncident ;
+    # mapping the specific consequence to the person's rights
+    dpv:hasConsequence risk:RightsViolated ;
+    # mapping the specific impact to the entity
+    dpv:hasImpactOn dpv:DataSubject ;
+    # defining the severity as high following the legal definition
+    dpv:hasSeverity risk:ExtremelyHighSeverity ;
+    # define the status to tell the HDAB that the incident is under investigation
+    dpv:hasStatus risk:IncidentOngoing .
