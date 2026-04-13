@@ -1,0 +1,52 @@
+@prefix dpv: <https://w3id.org/dpv#> .
+@prefix eu-ehds: <https://w3id.org/dpv/ext/eu-ehds#> .
+@prefix sector-health: <https://w3id.org/dpv/ext/sector-health#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://w3id.org/examples#> .
+
+# the Health Data Access Application as per Art. 67
+ex:EnvironmentalHealthApplication a eu-ehds:HealthDataAccessApplication ;
+    # Formal title identifying the cross-domain nature of the study
+    dct:title "Health Data Access Application: Urban Respiratory Determinants" ;    
+    # Description of the benefit and intended use (Art. 67(2)(c))
+    dct:description "Application to analyse the correlation between atmospheric levels (Environmental Determinants) with emergency asthma admissions to improve urban public health policy." ;
+    
+    # The applicant identity and Status (Art. 67(2)(a))
+    dpv:hasEntity ex:PublicHealthInstitute ;
+    dpv:hasStatus dpv:ActivityProposed ;
+    
+    # Purpose and Sector-Specific Category
+    dpv:hasPurpose sector-health:PublicHealthMonitoring ;
+    
+    # Justification for Pseudonymisation (Art. 67(2)(e))
+    dpv:hasJustification "Pseudonymisation is required to link hospital admission timestamps with specific daily Environmental Health Determinant measurements." ;    
+    # Bringing in external datasets (Art. 67(2)(f))
+    # and referencing the Environmental Health Determinants to be uploaded
+    dpv:hasTechnicalMeasure ex:AirQualityDeterminantData ;
+
+    # Safeguards (Art. 67(2)(g))
+    dpv:hasTechnicalMeasure ex:GeospatialAnonymisationSafeguard ;
+    dpv:hasTechnicalMeasure ex:RequiredAnalyticsEnvironment ;
+
+    # Legal Basis (Art. 67(4))
+    dpv:hasLegalBasis dpv:OfficialAuthorityOfController ;
+  
+
+# Applicant (Art. 67(2)(a))
+ex:PublicHealthInstitute a dpv:LegalEntity ;
+    dct:title "National Institute for Public Health Research" ;
+    dct:description "Governmental research body conducting health surveillance." .
+
+# The Environmental Health Determinant
+ex:AirQualityDeterminantData a eu-ehds:EnvironmentalHealthDeterminant ;
+    dct:title "Urban Air Quality Sensor Data" ;
+    dct:description "Atmospheric determinant data to be uploaded to the SPE by the applicant." .
+
+# Safeguard in the application (Art. 67(2)(g))
+ex:GeospatialAnonymisationSafeguard a dpv:Safeguard ;
+    dct:description "Technical measure to ensure that patient residential zones cannot be re-identified when mapped against pollution grids." .
+
+#request (Art. 67(2)(i))
+ex:RequestedAnalyticsEnvironment a dpv:TechnicalMeasure ;
+    dct:description "Specific computing resources requested for cross-dataset statistical correlation." .
