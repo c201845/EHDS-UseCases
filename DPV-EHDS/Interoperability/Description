@@ -10,6 +10,6 @@ the second concept, the EHDS Conformity Assessment, which is categorised as a eu
 measure represents the formal audit conducted by a Market Surveillance Authority (MSA) to grant the mandatory eu EHR Label required 
 under EHDS Article 48. By utilizing the relationship dpv:isAssessmentOf, the example creates a machine-readable connection that links the legal 
 audit to the technical mapping engine. This connection allows for automated compliance tracking where the validity of the technical process is 
-dependent on the status of its assessment. If the audit status is marked as dpv:CompliancePassed and remains within its dpv:hasExpiryDate, the system 
+dependent on the status of its assessment. If the audit status is marked as dpv:Compliant and remains within its dpv:hasExpiryDate, the system 
 is considered authorised for cross-border exchange. Otherwise, the link effectively breaks, signaling that the technical process is no longer legally 
 cleared for use. 
