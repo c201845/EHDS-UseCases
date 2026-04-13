@@ -1,0 +1,38 @@
+## Use Case for eu-ehds:SeriousIncident
+Description: This example demonstrates the formal representation of systemic performance deterioration within an Electronic Health Record (EHR) 
+system as a baseline of Serious Incident under the EHDS framework. Following the strict definitions of Article 2.2(r), 
+the scenario models an EHR Database Synchronisation Failure where regional data nodes experience drift, compromising the consistency and 
+integrity of the health data space. The core entity eu-ehds:SeriousIncident acts as the legal trigger for reporting, while the use of 
+risk:Vulnerability via the ex:EHRSystem-Malfunction allows the model to specify the technical root cause—specifically a "deterioration in 
+characteristics" - separately from the incident itself. By applying dpv:ModerateLikelihood and risk:HighSeverity, the model provides a 
+machine-readable justification why this specific synchronisation error crosses the "Serious" threshold required for regulatory notification. 
+Finally, linking the risk to ex:EmergencyDataBackup (a dpv:TechnicalMeasure) shows how the DPV framework tracks 
+the active defense mechanism used to maintain data availability throughout the risk management lifecycle.
+
+## Use Case for eu-ehds:SeriousHealthIncident
+Description: This scenario represents a critical incident category: a Clinical Alert Failure leading to a "Serious Health Incident" and 
+direct patient harm. Following Article 2.2(r)(i), the model demonstrates how an ex:AlertLogicMalfunction (a sub-concept 
+of risk:Vulnerability) fails to trigger life saving drug interaction warnings, resulting in risk:PhysicalHarm to the dpv:DataSubject. 
+The anchor concept eu-ehds:SeriousHealthIncident reflects the highest tier of medical risk, justified by an risk:ExtremelyHighSeverity 
+and risk:LowLikelihood assessment, which is essential for EHDS compliance audits. The model impressively incorporates ex:ManualPharmacistValidation 
+as a dpv:OrganisationalMeasure, using the status dpv:ActivityCompleted to prove to auditors that the safeguard is fully operational. 
+
+## Use Case for eu-ehds:SeriousRightIncident
+Description: This scenario provides a detailed modeling of a "Serious Right Incident" arising from the Unauthorised Disclosure of Sensitive 
+Health Data, representing a direct prejudice to fundamental privacy rights as outlined in EHDS Article 2.2(r)(ii). 
+The concept eu-ehds:SeriousRightIncident is used to distinguish non-physical harms from medical ones, where the inclusion of 
+risk:RightsViolated transforms a simple data breach into a specific legal consequence, allowing regulators to filter for incidents 
+that impact constitutional protections. Mapping the incident to the dpv:DataSubject through dpv:hasImpactOn ensures the model focuses 
+on the natural person's loss of control over their personal data. Because this incident involves protected medical history, 
+risk:ExtremelyHighSeverity is utilized to trigger high-priority workflows, while the status risk:IncidentOngoing serves as a persistent 
+flag for Health Data Access Bodies (HDABs) that the breach investigation and mitigation of social prejudice are still in progress.
+
+## Use Case for eu-ehds:SeriousHealthInfrastructureDisruption
+Description: This example illustrates the formal representation of Regional Hospital Health Infrastructure Downtime, modeling a 
+"Serious Health Infrastructure Disruption" that prevents the management and operation of healthcare services as defined in Article 2.2(r)(iii). 
+The use of eu-ehds:SeriousHealthInfrastructureDisruption shifts the focus from individual data records to systemic resilience, and by employing 
+risk:MaterialDamage, the model successfully represents harm as an operational loss of utility. The impact is explicitly mapped to the 
+dpv:Hospital, demonstrating the extension's ability to handle organisational victims within a health ecosystem. The technical source is 
+defined via the risk:Vulnerability ex:SystemicServerFailure, providing a clear link between a localized IT failure and a broad infrastructure 
+outage. Furthermore, the association with ex:SecondaryDataCenterFailover proves that the DPV model can capture complex resilience strategies 
+as dpv:TechnicalMeasure instances during the recovery process.
