@@ -1,0 +1,36 @@
+@prefix dpv: <https://w3id.org/dpv#> .
+@prefix pd: <https://w3id.org/dpv/pd#> .
+@prefix eu-ehds: <https://w3id.org/dpv/ext/eu-ehds#> .
+@prefix sector-health: <https://w3id.org/dpv/ext/sector-health#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://w3id.org/examples#> .
+
+
+# The Primary Use activity for hospital discharge management
+ex:CardiacSurgeryHospitalDischargeActivity a dpv:PersonalDataHandling ;
+    dct:title "Post-surgical cardiac digital Discharge Reporting" ;
+    
+    dpv:hasPurpose eu-ehds:DischargeReport ;
+    
+    dpv:hasDataController ex:RegionalSurgicalUnit ;
+    dpv:hasDataRecipient ex:PrimaryCareSpecialist ;
+    
+    dpv:hasPersonalData pd:MedicalHealth,
+                        pd:PhysicalHealth,  
+                        pd:IndividualHealthHistory ; 
+ 
+    dpv:hasTechnicalMeasure dpv:PhysicalAccessControlMethod, 
+                            dpv:EncryptionAtRest,
+                            dpv:TechnicalStandard ;
+    
+   
+    # Status and Compliance
+    dpv:hasStatus dpv:ActivityCompleted ;
+    dpv:hasComplianceStatus dpv:Compliant ;
+    
+    dct:description "Generation of structured discharge summaries containing medical and physical health data to ensure care continuity."@en .
+
+# Supporting Instance Definitions
+ex:RegionalSurgicalUnit a sector-health:HealthcareProvider ;
+    dct:title "Regional Surgical Unit" .

@@ -1,0 +1,30 @@
+@prefix dpv: <https://w3id.org/dpv#> .
+@prefix eu-ehds: <https://w3id.org/dpv/ext/eu-ehds#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://w3id.org/examples#> .
+
+# the activity for prescribing and providing a medical device
+ex:MedicalDeviceProvisionProcess a dpv:PersonalDataHandling ;
+    dct:title "Medical Device Prescription and Provisioning" ;
+    
+    # Primary Use purposes from the EHDS extension
+    dpv:hasPurpose eu-ehds:MedicalDevicesPrescription, 
+                    eu-ehds:MedicalDevicesProvision ;
+    
+    dpv:hasLegalBasis dpv:OfficialAuthorityOfController ;
+   
+    dpv:hasDataController dpv:Clinic ;
+    dpv:hasDataRecipient sector-health:MedicalDeviceManufacturer ;
+    
+    dpv:hasPersonalData eu-ehds:PersonalGeneratedMedicalDeviceData ;
+    
+    dpv:hasOrganisationalMeasure dpv:PrivacyByDesign ;
+    
+    dpv:hasTechnicalMeasure dpv:EncryptionAtRest, dpv:AccessControlMethod ;
+    
+    # Status and Compliance
+    dpv:hasStatus dpv:ActivityOngoing ;
+    dpv:hasComplianceStatus dpv:Compliant ;
+    
+    dct:description "EHR data processing to facilitate the customised delivery of medical devices to patients."@en .
