@@ -1,0 +1,30 @@
+@prefix dpv: <https://w3id.org/dpv#> .
+@prefix eu-ehds: <https://w3id.org/dpv/ext/eu-ehds#> .
+@prefix pd: <https://w3id.org/dpv/pd#> .
+@prefix sector-health: <https://w3id.org/dpv/ext/sector-health#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <https://w3id.org/examples#> .
+
+# Primary Use activity for precision medicine safety
+ex:GenomicInformedPrescribing a dpv:PersonalDataHandling ;
+    dct:title "Genomic Medication Safety Check" ;
+    
+    dpv:hasPurpose eu-ehds:PatientSummary ;
+    
+    # the data categories for high-fidelity safety
+    dpv:hasPersonalData pd:Genetic,             # Hereditary markers for drug metabolism
+                        pd:Physical,            # Physiological status affecting dosage
+                     
+    
+    # the Legal basis is Public Interest in medical safety (Art. 9.2.i)
+    dpv:hasLegalBasis dpv:PublicInterest ;
+    
+    # the Technical Measures for high-sensitivity data safety
+    # Minimise visibility of raw genetic data 
+    dpv:hasTechnicalMeasure dpv:Deidentification,       
+                            dpv:AccessControlMethod,    
+                            dpv:TechnicalStandard ;
+    
+    dct:description "Accessing genomic and physical data within the patient summary to ensure precision medication safety."@en .
+
