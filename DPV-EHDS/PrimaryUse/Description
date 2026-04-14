@@ -1,0 +1,37 @@
+## Use Case 1 for eu-ehds:PatientSummary
+Description: This example presents the Primary Use application of the eu-ehds:PatientSummary by
+integrating precision medicine into clinical workflows. The activity captures a data handling event
+where a practitioner accesses the patient summary to ensure that a new treatment plan is compatible with the patient’s biological profile. The 
+model integrates pd:Genetic data to identify hereditary predispositions that influence drug efficacy and pd:Physical data to assess the 
+patient's current physiological capacity to metabolise specific compounds. The processing is anchored in dpv:PublicInterest, reflecting the 
+mandate of the European Health Data Space to utilise standardised health information for the prevention of adverse medical events and the 
+enhancement of public health outcomes. To safeguard this highly sensitive information, dpv:Deidentification masks the raw biological 
+sequences during the initial screening phase and enforces dpv:AccessControlMethod to ensure that only authorided clinical staff 
+can view detailed results. The adherence to a dpv:TechnicalStandard ensures that these clinical insights are fully interoperable,
+allowing the eu-ehds:PatientSummary to function as a safety tool following the patient across the European healthcare ecosystem.
+
+## Use Case 2 for eu-ehds:MedicalDevicesPrescription and eu-ehds:MedicalDevicesProvision
+Description: This example presents a Primary Use scenario within the European Health Data Space (EHDS) framework, 
+focusing on the clinical workflow of prescribing and delivering medical devices. It models a dpv:PersonalDataHandling 
+activity where a healthcare provider dpv:DataController manages the transition from a clinical prescription to the physical 
+provision and technical calibration of a medical device. The process is grounded in dpv:OfficialAuthorityOfController, reflecting 
+the clinician's mandated duty to provide healthcare services and the state’s role in health system management under the EHDS. 
+The system integrates dpv:PrivacyByDesign to ensure that data protection is embedded into the clinical workflow mandating that 
+only the minimum necessary data is shared for a specific treatment. This organisational policy is enforced through robust technical 
+measures dpv:EncryptionAtRest which protects the sensitive eu-ehds:PersonalGeneratedMedicalDeviceData from unauthorised access during 
+storage, and dpv:AccessControlMethod restricting data interaction to authorised clinical staff and technical engineers, ensuring a clear
+and secure audit trail. Aligning the purposes of eu-ehds:MedicalDevicesPrescription and eu-ehds:MedicalDevicesProvision, the example 
+demonstrates how the EHDS standardises data flows between clinics and manufacturers,allowing for the customised delivery of devices calibrated
+to the patient's specific physiological needs.
+
+## Use Case 3 for eu-ehds:DischargeReport
+Description:This use case illustrates the digital handover of health data following a cardiac procedure, modeling the eu-ehds:DischargeReport 
+as a priority category required by the European Health Data Space. The process involves a sector-health:HealthcareProvider which acts as the 
+dpv:DataController, who prepares and shares a structured clinical summary with a ex:PrimaryCareSpecialist to ensure care continuity. 
+Leveraging the pd: extension further helps the system to distinguish between pd:MedicalHealth, which includes formal surgical codes and diagnoses,
+and pd:PhysicalHealth documenting the patient's actual recovery status and vital signs. This is supplemented by the pd:IndividualHealthHistory to 
+provide a chronological account of the entity's hospital stay. To protect this sensitive information, the system relies on dpv:PhysicalAccessControlMethod 
+to secure the clinical workstations in the ward and dpv:EncryptionAtRest to safeguard the stored records. The activity reaches dpv:ActivityCompleted 
+once the report is successfully transmitted, maintaining a dpv:hasComplianceStatus of dpv:Compliant. Furthermore, the application of a dpv:TechnicalStandard
+ensures that the report is fully interoperable and follows the required European exchange formats. This approach eliminates information gaps during 
+the care transition, directly supporting patient safety and recovery.
