@@ -9,7 +9,7 @@
 # the Data Permit for a specific regulatory safety study
 ex:DrugSafetyPermit a eu-ehds:DataPermit ;
     dct:title "Post-Market Pharmacovigilance Permit" ;
-    dct:description "Permit issued for the secondary use of clinical data to investigate cardiovascular safety signals in post-market medication." ;
+    dct:description "Permit issued for the secondary use of clinical data to investigate cardiovascular safety (heart-related issues) signals in post-market medication." ;
     
     # The regulatory body authorised to access the data
     dpv:hasRecipient ex:MedicinesAgency ;
